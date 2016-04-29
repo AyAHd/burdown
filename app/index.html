@@ -1,0 +1,42 @@
+<!-- Filename: index.hbs -->
+<html>
+<head>
+    <title>Burdown Chart in AngularJS</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/ng-table.min.css"/>
+	<link rel="stylesheet" href="css/angular-chart.min.css"/>
+    
+    <!-- Bootstrap + Angular + Libs JavaScript -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/ng-table.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="js/angular-chart.min.js"></script>
+</head>
+
+<body class="container" data-ng-app="burdown">
+
+<div data-table ng-controller="TableController">
+	Loading Table...
+	<table ng-table="tableParams" class="table"> 
+		<tr ng-repeat="d in $data">	
+			<td data-title="'Date'" sortable="'date'">{{d.attDate.$date}}</td>
+			<td data-title="'Points'" sortable="'points'">{{d.attPoints}}</td>
+			<td data-title="'Points restant'" sortable="'points'">{{100 - d.attPoints}}</td>
+			<td data-title="'ID'" sortable="'id'">{{d._id}}</td>
+		</tr>
+	</table>
+</div>
+
+<div data-chart ng-controller="ChartController">
+	Loading Burdown Chart...
+	<canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="onClick" >
+	</canvas> 
+</div>
+
+<script src="core.js"></script>
+</body>
+</html>

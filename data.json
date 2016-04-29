@@ -1,0 +1,11 @@
+[
+	{"attPoints": 5, "attDate": {$date: "2016-01-01T00:00:00Z"}},
+	{"attPoints": 15, "attDate": {$date: "2016-01-03T00:00:00Z"}},
+	{"attPoints": 22, "attDate": {$date: "2016-01-05T00:00:00Z"}},
+	{"attPoints": 13, "attDate": {$date: "2016-01-07T00:00:00Z"}},
+	{"attPoints": 7, "attDate": {$date: "2016-01-09T00:00:00Z"}},
+	{"attPoints": 14, "attDate": {$date: "2016-01-11T00:00:00Z"}},
+	{"attPoints": 19, "attDate": {$date: "2016-01-13T00:00:00Z"}},
+	{"attPoints": 0, "attDate": {$date: "2016-01-15T00:00:00Z"}}
+]
+
